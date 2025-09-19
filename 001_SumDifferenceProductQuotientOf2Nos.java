@@ -25,9 +25,16 @@ class SumDifferenceProductQuotientOf2Nos {
     int getQuotient() {
         return this.firstNum / this.secondNum; 
     }
+
+    void displayResult() {
+        System.out.printf("Sum = %d%n", this.getSum());
+        System.out.printf("Difference = %d%n", this.getDifference());
+        System.out.printf("Product = %d%n", this.getProduct());
+        System.out.printf("Quotient = %d%n", this.getQuotient());
+    }
 }
 
-class MainSumDifferenceProductQuotientOf2Nos {
+class Main {
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
 
@@ -38,12 +45,8 @@ class MainSumDifferenceProductQuotientOf2Nos {
         int secondNum = scanner.nextInt();
 
         SumDifferenceProductQuotientOf2Nos obj = new SumDifferenceProductQuotientOf2Nos(firstNum, secondNum);
+        obj.displayResult();
         
-        System.out.printf("Sum = %d%n", obj.getSum());
-        System.out.printf("Difference = %d%n", obj.getDifference());
-        System.out.printf("Product = %d%n", obj.getProduct());
-        System.out.printf("Quotient = %d%n", obj.getQuotient());
-
         scanner.close();
     }
 }
